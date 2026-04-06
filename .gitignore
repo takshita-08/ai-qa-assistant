@@ -6,3 +6,55 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+*.zip
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+.env/
+.env.*
+
+# Environment variables
+.env
+*.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# pytest
+.pytest_cache/
+
+
+# Jupyter (if any)
+.ipynb_checkpoints/
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Node (sometimes Playwright installs)
+node_modules/
+
+# Secrets
+*.pem
+*.key

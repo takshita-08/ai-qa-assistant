@@ -10,7 +10,7 @@ class LoginPage:
         self.title = ".title"
 
     def load_page(self):
-        self.page.goto(BASE_URL)
+        self.page.goto(BASE_URL,wait_until="domcontentloaded")
 
     
     def login(self,username,password):
