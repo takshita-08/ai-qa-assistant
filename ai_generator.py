@@ -1,8 +1,14 @@
 import os
 from google import genai
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv(dotenv_path=".env")
+
 # Create client
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
 
 
 def generate_test_script(description):
@@ -31,12 +37,12 @@ def generate_test_script(description):
 
 
 if __name__ == "__main__":
-    scenario = "Test login functionality for https://www.saucedemo.com with valid credentials"
+    scenario = "Test login functionality for https://www.saucedemo.com with invalid credentials"
 
     code = generate_test_script(scenario)
 
     if code:
-        with open("test_generated_final.py", "w") as f:
+        with open("test_generated_invalid.py", "w") as f:
             f.write(code)
 
         print("✅ Generated successfully")
